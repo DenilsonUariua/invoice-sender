@@ -1,6 +1,7 @@
 import { Resend } from "resend";
 import { EmailTemplate } from "../../components/email-templates/eplan-invoice";
-
+// Nextjs route segment config
+export const dynamic = 'force-dynamic' // Force dynamic (server) route instead of static page
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function GET() {
