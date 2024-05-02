@@ -2,7 +2,7 @@
     "crons": [
       {
         "path": "/api/invoice",
-        "schedule": "35 11 * * *"
+        "schedule": "45 11 * * *"
       }
     ]
   }
