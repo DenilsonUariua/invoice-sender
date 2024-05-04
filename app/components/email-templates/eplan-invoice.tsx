@@ -13,15 +13,15 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
         <div></div>
         <div className="text-right">
           <p className="text-gray-500 text-sm">
-            Invoice #{Math.random() * 10000}
+            Invoice #{(Math.random() * 10000).toFixed(0)}
           </p>
-          <p className="text-gray-500 text-sm">Date: {new Date().toString()}</p>
+          <p className="text-gray-500 text-sm">Date: {new Date().toDateString()}</p>
         </div>
       </header>
       <main>
         <table className="w-full border-collapse">
           <thead>
-            <tr className="bg-gray-100">
+            <tr className="bg-gray-100 text-left">
               <th className="py-2 px-4 text-left text-sm font-medium text-gray-700">
                 Service
               </th>
@@ -41,18 +41,18 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
               <td className="py-4 px-4 text-sm text-gray-700">
                 E-plan Archive Development
               </td>
-              <td className="py-4 px-4 text-sm text-gray-700">N$152.17</td>
-              <td className="py-4 px-4 text-sm text-gray-700">40</td>
+              <td className="py-4 px-4 text-sm text-gray-700">N$78.26</td>
+              <td className="py-4 px-4 text-sm text-gray-700">23</td>
               <td className="py-4 px-4 text-right text-sm text-gray-700">
-                N$3500.00
+                N$1800.00
               </td>
             </tr>
             <tr className="border-b">
               <td className="py-4 px-4 text-sm text-gray-700">UI/UX Design</td>
-              <td className="py-4 px-4 text-sm text-gray-700">N$152.17</td>
-              <td className="py-4 px-4 text-sm text-gray-700">20</td>
+              <td className="py-4 px-4 text-sm text-gray-700">N$73.91</td>
+              <td className="py-4 px-4 text-sm text-gray-700">23</td>
               <td className="py-4 px-4 text-right text-sm text-gray-700">
-                N$1500.00
+                N$1700.00
               </td>
             </tr>
             <tr className="border-b">
@@ -60,7 +60,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                 Maintenance & Debugging
               </td>
               <td className="py-4 px-4 text-sm text-gray-700">N$65.21</td>
-              <td className="py-4 px-4 text-sm text-gray-700">10</td>
+              <td className="py-4 px-4 text-sm text-gray-700">23</td>
               <td className="py-4 px-4 text-right text-sm text-gray-700">
                 N$1500.00
               </td>
@@ -84,7 +84,9 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
           Branch: Windhoek Branch 484372
         </p>
         <div className="mt-6">
-          <h3 className="text-gray-700 font-medium mb-2">Contact Us</h3>
+          <h3 className="text-gray-700 font-medium mb-2">
+            Contact Information
+          </h3>
           <p className="text-gray-500 text-sm">
             Denilson Uariua
             <br />

@@ -9,7 +9,7 @@ export async function GET() {
     const data = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
       to: ["denuariua@gmail.com"],
-      subject: `Denilson Uariua E-Plan invoice - ${new Date().getDay()}`,
+      subject: `Denilson Uariua E-Plan invoice - ${new Date().getMonth()} ${new Date().getFullYear()}`,
       text: "Hello Denilson this is the invoice that you created good work buddy keep on trucking.",
       react: EmailTemplate({ firstName: "John" }),
     });
